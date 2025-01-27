@@ -8,7 +8,7 @@ if('geolocation' in navigator){
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
         L.marker([latitude, longitude]).addTo(map).bindPopup("iam here.").openPopup();
-        var search=document.getElementById("searchlocation")
+        var search=document.getElementById("Location")
         search.addEventListener("click", function(){
             var searchlocation=document.getElementById("searchlocation").value;
             fetch( `https://nominatim.openstreetmap.org/search?format=json&q=${searchlocation}`)
